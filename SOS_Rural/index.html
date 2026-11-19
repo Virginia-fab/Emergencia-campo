@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#176b43"><meta name="description" content="SOS Rural: plataforma de alertas y emergencias para comunidades rurales y generales.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<title>SOS Rural</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="brand"><span class="mark">✚</span><div><b>SOS RURAL</b><small>Alertas y emergencias</small></div></div><nav><button id="userTab" class="selected">Usuario</button><button id="adminTab">Administración</button></nav></header>
+<main>
+<section id="userView">
+<div class="welcome"><div><h1>Tu seguridad es prioridad.</h1><p>Ante una emergencia, solicitá asistencia.</p></div><span>🌾</span></div>
+<div class="sosbox"><p class="eyebrow">¿ESTÁS ANTE UNA EMERGENCIA?</p><button id="sos" class="sos">SOS</button><b>PRESIONÁ PARA GENERAR UNA ALERTA</b><small id="gpsStatus">Ubicación: pendiente de autorización</small></div>
+<h2>Tipo de emergencia</h2><div class="types">
+<button data-type="Accidente">🚑 <span>Accidente</span></button><button data-type="Incendio">🔥 <span>Incendio</span></button><button data-type="Emergencia médica">🩺 <span>Emergencia médica</span></button><button data-type="Inseguridad">🚨 <span>Inseguridad</span></button><button data-type="Otra emergencia">⚠️ <span>Otra emergencia</span></button></div>
+<div class="card"><h2>Accesos rápidos</h2><button class="wide" id="history">📋 Mis alertas</button><button class="wide" id="contacts">☎️ Contactos de emergencia</button></div>
+</section>
+<section id="adminView" hidden>
+<h1>Centro de operaciones</h1><p class="muted">Panel demostrativo de administración</p>
+<div class="stats"><div class="card"><small>Total</small><strong id="total">0</strong></div><div class="card"><small>Pendientes</small><strong id="pending">0</strong></div><div class="card"><small>Resueltas</small><strong id="resolved">0</strong></div></div>
+<div class="card"><h2>Alertas recibidas</h2><div id="alerts"><p class="muted">Todavía no hay alertas registradas.</p></div></div>
+<div class="card"><h2>Establecimientos</h2><form id="orgForm"><input id="orgName" placeholder="Nombre de empresa o establecimiento" required><input id="orgPlace" placeholder="Localidad / zona" required><button class="green">Agregar establecimiento</button></form><div id="orgs"></div></div>
+</section>
+</main>
+<dialog id="alertDialog"><form id="alertForm" method="dialog"><h2>Nueva alerta</h2><label>Tipo<select id="kind"><option>Accidente</option><option>Incendio</option><option>Emergencia médica</option><option>Inseguridad</option><option>Otra emergencia</option></select></label><label>Nombre<input id="person" required></label><label>Teléfono<input id="phone" type="tel" required></label><label>Ubicación / referencia<textarea id="place" required placeholder="Establecimiento, ruta, localidad..."></textarea></label><label>Descripción<textarea id="details" placeholder="¿Qué ocurrió?"></textarea></label><button type="button" id="locate" class="secondary">Obtener ubicación GPS</button><small id="coords"></small><p class="notice">Demo: esta alerta se guarda solamente en este dispositivo. No avisa a servicios de emergencia.</p><div class="actions"><button type="button" id="cancel" class="secondary">Cancelar</button><button class="red">Registrar alerta de prueba</button></div></form></dialog>
+<footer>Prototipo inicial · No sustituye los servicios oficiales de emergencia.</footer>
+<script src="app.js"></script>
+</body></html>

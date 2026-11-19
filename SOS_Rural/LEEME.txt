@@ -1,0 +1,15 @@
+SOS RURAL - PROTOTIPO PWA
+1. Esta carpeta contiene una primera demo web instalable.
+2. Para probarla localmente, abrí index.html en un navegador. Algunas funciones como GPS e instalación PWA requieren publicarla mediante HTTPS.
+3. Para publicarla gratis con GitHub Pages:
+   a) Crear cuenta en https://github.com
+   b) Crear un repositorio público llamado sos-rural
+   c) Subir TODOS los archivos de esta carpeta a la raíz del repositorio
+   d) Ir a Settings > Pages
+   e) En Build and deployment seleccionar Deploy from a branch
+   f) Elegir branch main y carpeta /(root), guardar
+   g) Esperar el enlace que aparece en Pages.
+4. En iPhone: abrir el enlace en Safari > Compartir > Añadir a pantalla de inicio.
+   En Android: abrir el enlace en Chrome > menú > Instalar aplicación / Añadir a pantalla de inicio.
+ADVERTENCIA:
+Esta es solo una demostración. Las alertas se guardan en el navegador/dispositivo (localStorage). No hay servidor, cuentas, sincronización entre usuarios, despacho, SMS ni conexión con bomberos/ambulancias. No usar para emergencias reales.
